@@ -1,0 +1,21 @@
+﻿@model Common.Volunteer
+
+@{
+    ViewBag.Title = "Application";
+}
+
+<div class="jumbotron">
+    <h1>Welcome Volunteers!</h1>
+    <p class="lead">Please complete this brief application.</p>
+</div>
+
+<div class="row">
+    @using (Html.BeginForm())
+    {
+        <div style="margin-bottom: 20px; margin-top: 20px;">
+            @Html.EditorForModel()
+        </div>
+
+        <input type="submit" value="Submit Application" />
+    }
+</div>
